@@ -22,7 +22,7 @@ async def radio(ctx):
         voice_channel = ctx.author.voice.channel
         vc = await voice_channel.connect()
         vc.play(discord.FFmpegPCMAudio(STREAM_URL))
-        await ctx.send("🔊 Reproduciendo la radio.")
+        await ctx.send("🔊 Reproduciendo Radio Conqueror's Blade.")
     else:
         await ctx.send("❌ Debes estar en un canal de voz.")
 
@@ -30,7 +30,7 @@ async def radio(ctx):
 async def stop(ctx):
     if ctx.voice_client:
         await ctx.voice_client.disconnect()
-        await ctx.send("⏹️ Radio detenida.")
+        await ctx.send("⏹️ Radio Conqueror'Blade detenida.")
     else:
         await ctx.send("❌ El bot no está en un canal de voz.")
 
